@@ -17,7 +17,7 @@ const productos = [
     nombre: "Mochila Delta",
     detalle: "Impermeable, 25 litros",
     precio: "$98.000",
-    imagen: "/productos/mochila.webp",
+    imagen: "/productos/mochila.jpg",
   },
 ];
 

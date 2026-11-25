@@ -7,7 +7,7 @@ export default function Banner() {
     <section className="overflow-hidden rounded-2xl bg-neutral-950 text-white">
       <div className="relative">
         <Image
-          src="/banner.jpg"
+          src="/productos/banner.jpg"
           alt=""
           fill
           sizes="100vw"
