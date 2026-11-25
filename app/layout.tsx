@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-import { Archivo, Inter } from "next/font/google";
+
+
+import { Archivo, Inter, Kaushan_Script } from "next/font/google";
+
+const script = Kaushan_Script({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-script",
+});
 
 const display = Archivo({
   subsets: ["latin"],
@@ -27,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${display.variable} ${body.variable} font-[family-name:var(--font-body)] antialiased`}
+        className={`${display.variable} ${body.variable} ${script.variable} font-[family-name:var(--font-body)] antialiased`}
       >
         {children}
       </body>
