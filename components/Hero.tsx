@@ -55,14 +55,20 @@ export default function Hero() {
 
       {/* Navegación */}
       <header className="relative z-20 grid grid-cols-[1fr_auto_1fr] items-center px-6 pt-8 md:px-[5.6%] md:pt-[18px]">
-        <nav className="hidden gap-10 text-[13px] md:flex">
+        <Link
+          href="/"
+          className="col-start-1 justify-self-start font-[family-name:var(--font-display)] text-sm font-extrabold uppercase tracking-wide"
+        >
+          Pesca Fishing
+        </Link>
+
+        <nav className="col-start-2 hidden gap-10 text-[13px] md:flex">
           {navIzq.map((l) => (
             <Link key={l} href="#categorias" className="hover:opacity-60">
               {l}
             </Link>
           ))}
         </nav>
-
 
         <div className="col-start-3 flex items-center justify-end gap-10 text-[13px]">
           <nav className="hidden gap-10 md:flex">
@@ -81,29 +87,8 @@ export default function Hero() {
         </div>
       </header>
 
-      {/* Texto de apoyo */}
-      <div className="relative z-10 px-6 pt-10 md:absolute md:left-[5.6%] md:top-[148px] md:w-[240px] md:p-0">
-        <p className="text-xs uppercase leading-5 tracking-wide">
-          reel, caña y señuelo para cada especie,anzuelos, carnada y accesorios para cada técnica
-        </p>
-        <Link
-          href="#productos"
-          className="mt-4 inline-block text-xs text-neutral-500 hover:text-neutral-900"
-        >
-          Explorar
-        </Link>
-      </div>
-      <p className="hidden text-xs text-neutral-500 md:absolute md:left-[73.4%] md:top-[148px] md:block">
-        © Desde 1998
-      </p>
-
-      {/* Título */}
-      <h1 className="relative z-10 my-8 text-center font-[family-name:var(--font-script)] text-7xl leading-none -rotate-6 md:absolute md:left-1/2 md:top-[190px] md:my-0 md:w-max md:-translate-x-1/2 md:-rotate-[9deg] md:text-[clamp(7rem,14vw,13rem)]">
-        Pesca Fishing
-      </h1>
-
       {/* Foto vertical central */}
-      <div className="relative z-[1] mx-6 aspect-[4/5] overflow-hidden rounded-xl md:absolute md:left-1/2 md:top-0 md:m-0 md:aspect-auto md:h-[655px] md:w-[14.6%] md:-translate-x-1/2 md:rounded-none">
+      <div className="relative z-[1] mx-6 mt-5 h-[60svh] min-h-[370px] max-h-[760px] rounded-xl md:absolute md:left-1/2 md:top-0 md:m-0 md:h-[655px] md:max-h-none md:min-h-0 md:w-[14.6%] md:-translate-x-1/2 md:rounded-none">
         <Image
           src="/productos/hero2.jpg"
           alt="Pescador con mosca al atardecer"
@@ -112,6 +97,9 @@ export default function Hero() {
           sizes="(min-width: 768px) 15vw, 100vw"
           className="object-cover"
         />
+        <h1 className="absolute top-10 left-1/2 z-10 w-max -translate-x-1/2 -rotate-6 whitespace-nowrap font-[family-name:var(--font-script)] text-6xl leading-none text-black md:bottom-auto md:top-[190px] md:-rotate-[9deg] md:text-[clamp(7rem,14vw,13rem)]">
+          Pesca Fishing
+        </h1>
       </div>
 
       {/* Historias */}
@@ -145,16 +133,16 @@ export default function Hero() {
       </div>
 
       {/* Misión */}
-      <div className="relative z-10 px-6 py-10 md:absolute md:left-[5.6%] md:top-[659px] md:p-0">
-        <p className="text-xs uppercase tracking-wide text-neutral-500">Nuestra misión</p>
+      <div className="relative z-10 px-6 py-5 md:absolute md:left-[5.6%] md:top-[659px] md:p-0">
+        <p className="text-xs  tracking-wide text-neutral-500">Nuestros Productos</p>
         <h2 className="mt-4 max-w-[240px] text-2xl font-semibold leading-tight">
-          Equipos para pescar mejor, cuidando cada río
+          Reels, señuelos, cañas y mochilas
         </h2>
         <Link
           href="#productos"
           className="mt-6 inline-block rounded-full bg-neutral-950 px-5 py-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800"
         >
-          Cómo empezar
+          Ver productos
         </Link>
       </div>
 
