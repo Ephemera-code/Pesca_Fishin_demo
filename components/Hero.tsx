@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useCart } from "./CartProvider";
 
 const navIzq = ["Cañas", "Reels", "Señuelos"];
 const navDer = ["Ropa", "Contacto"];
@@ -31,6 +34,8 @@ function Pez({ className = "" }: { className?: string }) {
 }
 
 export default function Hero() {
+  const { count, openCart } = useCart();
+
   return (
     <section className="relative overflow-hidden rounded-2xl bg-white text-neutral-900 md:h-[900px]">
       {/* Decoración de fondo (solo escritorio) */}
@@ -80,10 +85,14 @@ export default function Hero() {
               </Link>
             ))}
           </nav>
-          <button className="flex items-center gap-2 rounded-full border border-neutral-900 py-0.5 pl-3 pr-0.5 text-xs">
+          <button
+            type="button"
+            onClick={openCart}
+            className="flex items-center gap-2 rounded-full border border-neutral-900 py-0.5 pl-3 pr-0.5 text-xs"
+          >
             Carrito
             <span className="grid size-5 place-items-center rounded-full bg-orange-500 text-[10px] font-semibold text-white">
-              0
+              {count}
             </span>
           </button>
         </div>
@@ -140,12 +149,22 @@ export default function Hero() {
         <h2 className="mt-4 max-w-[240px] text-2xl font-semibold leading-tight">
           Reels, señuelos, cañas y mochilas
         </h2>
-        <Link
-          href="#productos"
-          className="mt-6 inline-block rounded-full bg-neutral-950 px-5 py-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800"
-        >
-          Ver productos
-        </Link>
+        <div className="mt-6 flex flex-wrap gap-3">
+          <Link
+            href="#productos"
+            className="inline-block rounded-full bg-neutral-950 px-5 py-3 text-xs font-medium text-white transition-colors hover:bg-neutral-800"
+          >
+            Ver productos
+          </Link>
+          <a
+            href="https://wa.me/?text=Hola%21%20Quiero%20hacer%20una%20consulta%20sobre%20los%20productos"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full border border-[#25D366] px-5 py-3 text-xs font-medium text-[#1fae54] transition-colors hover:bg-[#25D366] hover:text-white"
+          >
+            Contactar
+          </a>
+        </div>
       </div>
 
       {/* Fotos inferiores */}
