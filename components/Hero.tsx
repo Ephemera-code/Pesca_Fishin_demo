@@ -57,11 +57,11 @@ export default function Hero() {
         </Link>
       </div>
 
-      <p className="absolute bottom-6 left-5 z-10 hidden max-w-[200px] text-xs text-white/70 md:block md:left-8">
+      <p className="absolute bottom-6 left-8 z-10 hidden max-w-[200px] text-xs text-white/70 md:block">
         Cañas, reels y señuelos para río, laguna y mar.
       </p>
 
-      <aside className="absolute bottom-5 right-5 z-10 hidden w-56 rounded-xl bg-white p-2 text-black md:block">
+      <aside className="absolute bottom-5 left-5 right-5 z-10 rounded-xl bg-white p-2 text-black md:left-auto md:right-8 md:w-56">
         <div className="relative h-24 overflow-hidden rounded-lg bg-neutral-200">
           <Image
             src="/productos/reel.jpg"
