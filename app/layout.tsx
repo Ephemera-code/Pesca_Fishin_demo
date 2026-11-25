@@ -25,6 +25,9 @@ const body = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(
     process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : undefined) ??
       (process.env.VERCEL_URL
         ? `https://${process.env.VERCEL_URL}`
         : "http://localhost:3000"),
@@ -36,9 +39,10 @@ export const metadata: Metadata = {
     description: "Cañas, reels y señuelos para pescar en río, laguna y mar.",
     type: "website",
     locale: "es_AR",
+    url: "/",
     images: [
       {
-        url: "/productos/hero2.jpg",
+        url: "/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Pesca Fishing",
@@ -49,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Pesca Fishing",
     description: "Cañas, reels y señuelos para pescar en río, laguna y mar.",
-    images: ["/productos/hero2.jpg"],
+    images: ["/og-image.jpg"],
   },
 };
 
