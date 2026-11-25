@@ -25,6 +25,28 @@ export default function Banner() {
           </Link>
         </div>
       </div>
+
+      <section className="border-t border-white/10 px-6 py-10 md:px-10">
+        <div className="mb-5">
+          <p className="text-xs font-semibold uppercase tracking-wide text-white/60">
+            Nuestra tienda
+          </p>
+          <address className="mt-2 not-italic text-sm">
+            Alfonsina Storni 2951, B1619DKI Garin, Provincia de Buenos Aires
+          </address>
+        </div>
+        <div className="overflow-hidden rounded-xl border border-white/10">
+          <iframe
+            title="Ubicación de Pesca Fishing"
+            src="https://www.google.com/maps?q=Alfonsina%20Storni%202951%2C%20Gar%C3%ADn%2C%20Buenos%20Aires&output=embed"
+            className="h-72 w-full border-0 md:h-96"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+            allowFullScreen
+          />
+        </div>
+      </section>
+
       <Footer />
     </section>
   );

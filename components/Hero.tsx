@@ -54,23 +54,25 @@ export default function Hero() {
       </div>
 
       {/* Navegación */}
-      <header className="relative z-20 grid grid-cols-[1fr_auto_1fr] items-center px-6 pt-8 md:px-[5.6%] md:pt-[18px]">
-        <Link
-          href="/"
-          className="col-start-1 justify-self-start font-[family-name:var(--font-display)] text-sm font-extrabold uppercase tracking-wide"
-        >
-          Pesca Fishing
-        </Link>
+      <header className="relative z-20 flex items-center justify-between px-6 pt-8 md:px-[5.6%] md:pt-[18px]">
+        <div className="flex items-center gap-10">
+          <Link
+            href="/"
+            className="font-[family-name:var(--font-display)] text-sm font-extrabold uppercase tracking-wide"
+          >
+            Pesca Fishing
+          </Link>
 
-        <nav className="col-start-2 hidden gap-10 text-[13px] md:flex">
-          {navIzq.map((l) => (
-            <Link key={l} href="#categorias" className="hover:opacity-60">
-              {l}
-            </Link>
-          ))}
-        </nav>
+          <nav className="hidden gap-10 text-[13px] md:flex">
+            {navIzq.map((l) => (
+              <Link key={l} href="#categorias" className="hover:opacity-60">
+                {l}
+              </Link>
+            ))}
+          </nav>
+        </div>
 
-        <div className="col-start-3 flex items-center justify-end gap-10 text-[13px]">
+        <div className="flex items-center justify-end gap-10 text-[13px]">
           <nav className="hidden gap-10 md:flex">
             {navDer.map((l) => (
               <Link key={l} href="#categorias" className="hover:opacity-60">
